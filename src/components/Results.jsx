@@ -1,7 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+// import { useLocation } from 'react-router-dom/cjs/react-router-dom.min'
+import ReactPlayer from 'react-player'
+
+import { useResultContext } from '../contexts/ResultContextProvider'
+import  Loading   from './Loading'    
 
 export const Results = () => {
-  return (
+    const { results, isLoading, getResults, searchTerm } =  useResultContext()
+    const location = useLocation()
+
+
+    if(isLoading) return <Loading />
+    return (
     <div>Results</div>
   )
 }

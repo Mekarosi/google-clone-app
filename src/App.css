@@ -99,6 +99,16 @@ Link p .navbar-links {
 }
 
 
+/* Loader */
+
+.loader {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+
+
 @media (max-width: 786px) {
 
 }
