@@ -1,0 +1,11 @@
+.light {
+    --theme-color: #111;
+    --theme-page-background: #F3F4F6;
+    --theme-page-text: #111;
+}
+
+.dark {
+    --theme-color: #E5E7EB;
+    --theme-page-background: #111827;
+    --theme-page-text: #E5E7EB;
+}

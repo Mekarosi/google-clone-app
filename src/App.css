@@ -12,3 +12,9 @@ body {
   background-color: #fff;
 
 }
+
+.App {
+  height: 100vh;
+  background: var(--theme-page-background);
+  color: var(--theme-page-text);
+}
