@@ -79,6 +79,12 @@ Link p .navbar-links {
   color: #111827
 }
 
+/* Routes */
+
+.routes-body {
+  padding: 1rem;
+}
+
 @media (max-width: 786px) {
 
 }
