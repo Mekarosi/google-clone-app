@@ -2,8 +2,8 @@ import React from 'react'
 
 export const Footer = () => {
   return (
-    <div>
-        <h1>Footer</h1>
+    <div className='footer-body .dark'>
+        <h1>{new Date().getFullYear()} Gogle inc</h1>
     </div>
   )
 }
