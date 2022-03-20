@@ -11,7 +11,9 @@ const App = () => {
   const [darkTheme, setDarkTheme] = useState('false');
   return (
     <div className={`App ${darkTheme ? 'dark' : 'light'}` }>
-        <h1>Welcome to gogle</h1>
+       <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme}/>
+       <Routes />
+       <Footer />
     </div>
   );
 }
