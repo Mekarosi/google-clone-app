@@ -8,7 +8,7 @@ export const ResultContextProvider = ({ children }) => {
     
     const [results, setResults] = useState([])
     const [isLoading, setIsLoading] = useState(false)
-    const [serchTerm, setSearchTerm] = useState('')
+    const [searchTerm, setSearchTerm] = useState('')
     
     // /videos, /search, /images, /news
     const getResults = async (types) => {
@@ -26,12 +26,14 @@ export const ResultContextProvider = ({ children }) => {
         }) 
         
         const data = await response.json()
+       console.log(data)
+
         setResults(data)
         setIsLoading(false)
     }
 
     return(
-        <ResultContext.Provider value={{ getResults, results, setResults, setSearchTerm, setSearchTerm, isLoading }}>
+        <ResultContext.Provider value={{ getResults, results, setResults, searchTerm, setSearchTerm, isLoading }}>
              {children}
         </ResultContext.Provider>
     )
