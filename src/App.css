@@ -14,7 +14,7 @@ body {
 }
 
 .App {
-  height: 100vh;
+  height: 100%;
   background: var(--theme-page-background);
   color: var(--theme-page-text);
 }
@@ -25,8 +25,8 @@ body {
   padding-bottom: 0;
   /* display: flex; 
   flex-wrap: wrap;
-  justify-content: center;
-  justify-items: center; */
+  justify-content: space-between;
+  align-items: center; */
   border-bottom: 1px solid #E5E7EB ;
   
 }
@@ -36,8 +36,9 @@ body {
 
 .navbar-div {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  justify-items: center;
+  align-items: center;
   margin-right: 0.125rem;
   max-width: max-content;
 }
@@ -137,8 +138,67 @@ Link p .navbar-links {
   color: #90cdf4;
 }
 
+/* Images */
+
+.images-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-link {
+  padding: 1.25rem;
+}
+
+.image-paragragh {
+  width: 10rem;
+  overflow-wrap: break-word;
+  font-size: small;
+  margin-top: 0.5rem;
+}
+
+
+/* News */
+
+.news-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1.5rem;
+
+}
+
+.news-div {
+  width: 100%;
+}
+
+.news-links:hover {
+    text-decoration: underline;
+}
+
+.news-title {
+  font-size: large;
+  color: #2b6cb0;
+
+}
+
+.news-body .dark {
+  color: #90cdf4;
+}
+
+.new-title-div {
+  display: flex;
+  gap: 1rem;
+}
+
 @media (max-width: 786px) {
   .search-div {
+    width: 40%;
+  }
+
+  .news-div {
     width: 40%;
   }
 }
@@ -148,9 +208,19 @@ Link p .navbar-links {
     justify-content: space-between;
   }
 
+
   .search-body {
     padding-left: 14rem;
     padding-right: 14rem;
+  }
+
+  .image-link {
+    padding: 0.75rem;
+  }
+
+  .news-body {
+    padding: 14rem;
+
   }
  
 }
