@@ -75,10 +75,13 @@ export const Results = () => {
                                 <p className='news-title .dark'>
                                     {title}
                                 </p>
+                            </a>    
                                 <div className='new-title-div'>
-                                    <a href={source.href} target='_blank' rel='noopener noreferrer'>{source.href}</a>
+                                    <a href={source.href} target='_blank' rel='noopener noreferrer'>
+                                        {source.href}
+                                    </a>
                                 </div>
-                            </a>
+                            
                         </div>
                      ))}
                 </div>

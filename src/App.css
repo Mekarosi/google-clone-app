@@ -205,6 +205,27 @@ Link p .navbar-links {
   padding: 0.5rem;
 }
 
+/* Links */
+
+.link-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+.link-url {
+  color: #2b6cb0;
+  border-bottom-width: 2px;
+  padding-bottom: 0.5rem;
+  
+}
+
+.link-body .dark {
+  color: #90cdf4;
+  border-color: #2b6cb0;
+}
+
 @media (max-width: 786px) {
   .search-div {
     width: 40%;
@@ -212,6 +233,12 @@ Link p .navbar-links {
 
   .news-div {
     width: 40%;
+  }
+
+  .link-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -235,4 +262,9 @@ Link p .navbar-links {
 
   }
  
+  .link-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
