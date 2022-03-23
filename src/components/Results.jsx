@@ -23,7 +23,7 @@ export const Results = () => {
     if(isLoading) return <Loading />
 
     console.log(location.pathname)
-    
+    console.log(news)
     switch (location.pathname) {
         case '/search':
             return (
@@ -46,9 +46,12 @@ export const Results = () => {
         case '/images':
             return (
                 <div className='image-body'>
-                    {(results && image_results) && image_results.map(({ image, link: { href, title }}, index) => (
+  
+                    {(results  && image_results) && image_results.map(({ image, link: { href, title }}, index) => (
+                            
                             <a className='image-link' href={href} key={index} target='_blank' rel="noopener noreferrer">
                                 <img src={image.src} alt={title} loading='lazy' />
+                                {console.log(image)}
                                 <p className='image-paragragh'>
                                     {title}
                                 </p>
@@ -61,10 +64,13 @@ export const Results = () => {
 
         case '/news':
             return (
+               
                 <div className='news-body'>
-                    {console.log(news)}
-                    {results && news.map(({ links, id, source, title }) => (
+                   
+                    {(results && news) && news.map(({ links, id, source, title }) => (
+                        
                         <div key={id} className='news-div'>
+                            
                             <a href={links[0].href} className='news-links' target='_blank' rel="noopener noreferrer">
                                 <p className='news-title .dark'>
                                     {title}
@@ -79,7 +85,20 @@ export const Results = () => {
             );
             
         case '/videos':
-            return 'VIDEOS';
+            return (
+                <div className='videos-body'>
+                   {results && results.map((video, index) => (
+                       <div key={index} className='video-div'>
+                           {console.log(video)}
+                           <ReactPlayer url={video.additional_links[0].href} controls width='355px' height='200px'/>
+                       </div>
+                   ) 
+
+                   )
+
+                   }
+                </div>
+            );
                       
         default:
             return 'ERROR';

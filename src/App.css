@@ -193,6 +193,18 @@ Link p .navbar-links {
   gap: 1rem;
 }
 
+
+/* Videos */
+
+.videos-body {
+  display: flex;
+  flex-wrap: wrap;
+} 
+
+.video-div {
+  padding: 0.5rem;
+}
+
 @media (max-width: 786px) {
   .search-div {
     width: 40%;

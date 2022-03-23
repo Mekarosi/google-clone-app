@@ -8,7 +8,7 @@ export const ResultContextProvider = ({ children }) => {
     
     const [results, setResults] = useState([])
     const [isLoading, setIsLoading] = useState(false)
-    const [searchTerm, setSearchTerm] = useState('JS Mastery')
+    const [searchTerm, setSearchTerm] = useState('elon musk')
     
     // /videos, /search, /images, /news
     const getResults = async (types) => {
@@ -26,9 +26,12 @@ export const ResultContextProvider = ({ children }) => {
         }) 
         
         const data = await response.json()
-       console.log(data)
-
-        setResults(data)
+        console.log(data)
+        if(types.includes('/news') === '/news'){
+            setResults(data.entries) 
+        }
+        console.log(data.entries)
+        setResults(data) 
         setIsLoading(false)
     }
 
