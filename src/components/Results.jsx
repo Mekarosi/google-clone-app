@@ -6,7 +6,7 @@ import { useResultContext } from '../contexts/ResultContextProvider'
 import  Loading   from './Loading'    
 
 export const Results = () => {
-    const { results: { results, image_results, entries: news }, isLoading, getResults, searchTerm } =  useResultContext()
+    const { results: { results, image_results, news }, isLoading, getResults, searchTerm } =  useResultContext()
     const location = useLocation()
 
     useEffect(() => {
@@ -75,7 +75,7 @@ export const Results = () => {
                                     {title}
                                 </p>
                             </a>    
-                            <div className='new-title-div'>
+                            <div className='news-title-div'>
                                 <a href={source.href} target='_blank' rel='noopener noreferrer'>
                                         {source.href}
                                 </a>

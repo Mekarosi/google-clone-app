@@ -28,11 +28,13 @@ export const ResultContextProvider = ({ children }) => {
         
         const data = await response.json()
         console.log(data)
-        if(types.includes('/news') === '/news'){
+        if(types.includes('/news')){
             setResults(data.entries) 
+        } else {
+            setResults(data) 
         }
-        console.log(data.entries)
-        setResults(data) 
+        
+        
         setIsLoading(false)
     }
 

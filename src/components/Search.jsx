@@ -24,8 +24,8 @@ useEffect(() => {
           onChange={(e) => setText(e.target.value)}
         />
           {text && (
-          <button type='button' className='search-button' onClick={() => setText('')}>
-               X
+          <button type='button' className='search-buttonX' onClick={() => setText('')}>
+               Clear Text
           </button>
         )}
       </div>
