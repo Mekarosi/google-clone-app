@@ -27,11 +27,16 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center; */
-  border-bottom: 1px solid #E5E7EB ;
+  border-bottom: 1px solid #E5E7EB;
+  
   
 }
-.navbar-body .dark {
+
+
+
+.navbar-body  {
   border-bottom: 1px solid #374151 ;
+  
 }
 
 .navbar-div {
@@ -50,12 +55,13 @@ body {
   color: white;
   padding: 4px 4px;
   border-radius: 10px;
+  text-decoration: none;
  
 }
 
-.dark .navbar-div {
-  background-color: #6B7280;
-  color: #111827;
+.navbar-body .dark {
+  background-color: #ffff;
+ 
 }
 
 Link p .navbar-links {
@@ -260,27 +266,10 @@ Link p .navbar-links {
   border-color: #2b6cb0;
 }
 
-@media (max-width: 786px) {
-  .search-div {
-    width: 40%;
-  }
 
-  .news-div {
-    width: 40%;
-  }
 
-  .link-body {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .searching-body {
-    margin-left: 19rem;
-  }
-}
-
-@media (max-width: 500px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
   .navbar-body {
     justify-content: space-between;
   }
@@ -296,7 +285,7 @@ Link p .navbar-links {
   }
 
   .news-body {
-    padding: 14rem;
+    padding: 7rem;
 
   }
  
@@ -307,12 +296,68 @@ Link p .navbar-links {
   }
 
   .searching-body {
-    margin-left: 12rem;
+    margin-left: 1rem;
     margin-top: 2.5rem;
   }
 
   .searching-text {
-    width: 24rem;
+    width: 15rem;
   }
 
+  .navbar-body .dark {
+    
+    margin-left: 5rem;
+  }
+
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  /* .navbar-body .dark { 
+    margin-left: 3rem;
+  } */
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .search-div {
+    width: 40%;
+  }
+
+  .news-div {
+    width: 40%;
+  }
+
+  .link-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .searching-body {
+    margin-left: 1rem;
+    width: 40%;
+  }
+
+  .navbar-body .dark {
+    
+    margin-left: 12rem;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .navbar-body .dark {
+    
+    margin-left: 30rem;
+  }
+   
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .navbar-body .dark {
+    
+    margin-left: 65rem;
+  }
 }
