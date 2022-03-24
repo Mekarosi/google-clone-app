@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-// import { useLocation } from 'react-router-dom/cjs/react-router-dom.min'
 import ReactPlayer from 'react-player'
 
 import { useResultContext } from '../contexts/ResultContextProvider'
@@ -76,11 +75,11 @@ export const Results = () => {
                                     {title}
                                 </p>
                             </a>    
-                                <div className='new-title-div'>
-                                    <a href={source.href} target='_blank' rel='noopener noreferrer'>
+                            <div className='new-title-div'>
+                                <a href={source.href} target='_blank' rel='noopener noreferrer'>
                                         {source.href}
-                                    </a>
-                                </div>
+                                </a>
+                            </div>
                             
                         </div>
                      ))}
@@ -92,8 +91,7 @@ export const Results = () => {
                 <div className='videos-body'>
                    {results && results.map((video, index) => (
                        <div key={index} className='video-div'>
-                           {console.log(video)}
-                           <ReactPlayer url={video.additional_links[0].href} controls width='355px' height='200px'/>
+                         {video.additional_links[0].href  && <ReactPlayer url={video.additional_links[0].href} controls width='355px' height='200px'/>}
                        </div>
                    ) 
 
