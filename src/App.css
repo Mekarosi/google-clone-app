@@ -10,6 +10,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
+  min-height: 100%;
 
 }
 
@@ -94,11 +95,14 @@ Link p .navbar-links {
 
 /* Footer */
 .footer-body {
+
   text-align: center;
   padding: 2.5rem;
-  margin-top: 2.5rem;
+  /* margin-top: 2.5rem; */
+  margin-top: 14rem; 
   border-top: 1px solid #6B7280;
   border-color: #E5E7EB;
+  
 }
 
 .footer-body .dark {
@@ -153,8 +157,10 @@ Link p .navbar-links {
 .searching-text {
   width: 20rem;
   height: 2.5rem;
-  border-radius: 10px;
-  border-width: 1px;
+  /* border-radius: 0px; */
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-width: 0;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -173,9 +179,13 @@ Link p .navbar-links {
 .search-buttonX {
   padding: 10px;
   color: #000;
-  border-radius: 10px;
+  /* border-radius: 5px; */
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
   background-color: #fff;
+  height: 48px;
+  border: transparent;
 }
 
 /* Images */
@@ -274,6 +284,12 @@ Link p .navbar-links {
     justify-content: space-between;
   }
 
+  .searching-text {
+    width: 6rem;
+  }
+
+  
+   
 
   .search-body {
     padding-left: 14rem;
@@ -342,17 +358,39 @@ Link p .navbar-links {
 
   .navbar-body .dark {
     
-    margin-left: 12rem;
+    margin-left: 23rem;
+  }
+  
+  .searching-text {
+    width: 15rem;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .navbar-body .dark {
     
-    margin-left: 30rem;
+    margin-left: 10rem;
   }
-   
+
+  .searching-text {
+    width: 20rem;
+  }
+
+ 
 }
+/* 
+@media only screen and (max-width: 992px) {
+  .navbar-body .dark {
+    
+    margin-left: 40rem;
+  }
+
+  .searching-text {
+    width: 15rem;
+  }
+
+ 
+} */
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
@@ -361,3 +399,4 @@ Link p .navbar-links {
     margin-left: 65rem;
   }
 }
+

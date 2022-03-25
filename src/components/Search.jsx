@@ -25,7 +25,7 @@ useEffect(() => {
         />
           {text && (
           <button type='button' className='search-buttonX' onClick={() => setText('')}>
-               Clear Text
+               X
           </button>
         )}
       </div>
