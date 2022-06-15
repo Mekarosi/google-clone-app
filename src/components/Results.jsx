@@ -6,7 +6,8 @@ import { useResultContext } from '../contexts/ResultContextProvider'
 import  Loading   from './Loading'    
 
 export const Results = () => {
-    const { results: { results, image_results, news }, isLoading, getResults, searchTerm } =  useResultContext()
+    // const { results: { results, image_results, entries: news }, isLoading, getResults, searchTerm } =  useResultContext()
+    const { results, isLoading, getResults, searchTerm } = useResultContext();
     const location = useLocation()
 
     useEffect(() => {
@@ -22,7 +23,7 @@ export const Results = () => {
     if(isLoading) return <Loading />
 
     console.log(location.pathname)
-    console.log(news)
+    
     switch (location.pathname) {
         case '/search':
             return (
@@ -46,11 +47,10 @@ export const Results = () => {
             return (
                 <div className='image-body'>
   
-                    {(results  && image_results) && image_results.map(({ image, link: { href, title }}, index) => (
+                    {results && results.map(({ image, link: { href, title }}, index) => (
                             
                             <a className='image-link' href={href} key={index} target='_blank' rel="noopener noreferrer">
-                                <img src={image.src} alt={title} loading='lazy' />
-                                {console.log(image)}
+                                <img src={image && image.src} alt={title} loading='lazy' />
                                 <p className='image-paragragh'>
                                     {title}
                                 </p>
@@ -66,18 +66,18 @@ export const Results = () => {
                
                 <div className='news-body'>
                    
-                    {(results && news) && news.map(({ links, id, source, title }) => (
+                    {results && results.map(({ links, id, source, title }) => (
                         
                         <div key={id} className='news-div'>
                             
-                            <a href={links[0].href} className='news-links' target='_blank' rel="noopener noreferrer">
+                            <a href={links && links[0].href} className='news-links' target='_blank' rel="noopener noreferrer">
                                 <p className='news-title .dark'>
                                     {title}
                                 </p>
                             </a>    
                             <div className='news-title-div'>
-                                <a href={source.href} target='_blank' rel='noopener noreferrer'>
-                                        {source.href}
+                                <a href={source && source.href} target='_blank' rel='noopener noreferrer'>
+                                        {source && source.href}
                                 </a>
                             </div>
                             
